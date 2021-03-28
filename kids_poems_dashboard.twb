@@ -1,0 +1,1346 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.21.0217.1203                               -->
+<workbook original-version='18.1' source-build='2020.4.2 (20204.21.0217.1203)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelRelationshipPerfOptions.true...ObjectModelRelationshipPerfOptions />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <_.fcp.MarkAnimation.true...style-rule element='animation'>
+      <format attr='animation-on' value='ao-on' />
+    </_.fcp.MarkAnimation.true...style-rule>
+  </style>
+  <datasources>
+    <datasource caption='emotion+ (PoKi)' inline='true' name='federated.01quck81ujjp6g1dsisfv04ecub5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='postgres.1as1ilz1kjda1h1frf8tv1xxw1ti'>
+            <connection authentication='username-password' class='postgres' dbname='PoKi' one-time-sql='' port='5432' server='localhost' username='postgres' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.1as1ilz1kjda1h1frf8tv1xxw1ti' name='author' table='[public].[author]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='postgres.1as1ilz1kjda1h1frf8tv1xxw1ti' name='emotion' table='[public].[emotion]' type='table' />
+          <relation connection='postgres.1as1ilz1kjda1h1frf8tv1xxw1ti' name='poem_emotion' table='[public].[poem_emotion]' type='table' />
+          <relation connection='postgres.1as1ilz1kjda1h1frf8tv1xxw1ti' name='poem' table='[public].[poem]' type='table' />
+          <relation connection='postgres.1as1ilz1kjda1h1frf8tv1xxw1ti' name='author' table='[public].[author]' type='table' />
+          <relation connection='postgres.1as1ilz1kjda1h1frf8tv1xxw1ti' name='gender' table='[public].[gender]' type='table' />
+          <relation connection='postgres.1as1ilz1kjda1h1frf8tv1xxw1ti' name='grade' table='[public].[grade]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[author_id]' value='[poem].[author_id]' />
+          <map key='[char_count]' value='[poem].[char_count]' />
+          <map key='[emotion_id]' value='[poem_emotion].[emotion_id]' />
+          <map key='[gender_id]' value='[author].[gender_id]' />
+          <map key='[grade_id]' value='[author].[grade_id]' />
+          <map key='[id (author)]' value='[author].[id]' />
+          <map key='[id (gender)]' value='[gender].[id]' />
+          <map key='[id (grade)]' value='[grade].[id]' />
+          <map key='[id (poem)]' value='[poem].[id]' />
+          <map key='[id (poem_emotion)]' value='[poem_emotion].[id]' />
+          <map key='[id]' value='[emotion].[id]' />
+          <map key='[intensity_percent]' value='[poem_emotion].[intensity_percent]' />
+          <map key='[name (author)]' value='[author].[name]' />
+          <map key='[name (gender)]' value='[gender].[name]' />
+          <map key='[name (grade)]' value='[grade].[name]' />
+          <map key='[name]' value='[emotion].[name]' />
+          <map key='[poem_id]' value='[poem_emotion].[poem_id]' />
+          <map key='[poki_num]' value='[poem].[poki_num]' />
+          <map key='[text]' value='[poem].[text]' />
+          <map key='[title]' value='[poem].[title]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[emotion]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[emotion_4D5E96D7FF6F4C7EAE808BD8012E0204]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[emotion]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[emotion_4D5E96D7FF6F4C7EAE808BD8012E0204]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[id (poem_emotion)]</local-name>
+            <parent-name>[poem_emotion]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[poem_emotion_92F5AD4E16AE4439B9B24331E36F9762]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>intensity_percent</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[intensity_percent]</local-name>
+            <parent-name>[poem_emotion]</parent-name>
+            <remote-alias>intensity_percent</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[poem_emotion_92F5AD4E16AE4439B9B24331E36F9762]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>poem_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[poem_id]</local-name>
+            <parent-name>[poem_emotion]</parent-name>
+            <remote-alias>poem_id</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[poem_emotion_92F5AD4E16AE4439B9B24331E36F9762]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>emotion_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[emotion_id]</local-name>
+            <parent-name>[poem_emotion]</parent-name>
+            <remote-alias>emotion_id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[poem_emotion_92F5AD4E16AE4439B9B24331E36F9762]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[id (poem)]</local-name>
+            <parent-name>[poem]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[poem_DC3D9F0D49A84E2B96F1CE2FF8591A73]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[poem]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[poem_DC3D9F0D49A84E2B96F1CE2FF8591A73]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>text</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[text]</local-name>
+            <parent-name>[poem]</parent-name>
+            <remote-alias>text</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[poem_DC3D9F0D49A84E2B96F1CE2FF8591A73]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>author_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[author_id]</local-name>
+            <parent-name>[poem]</parent-name>
+            <remote-alias>author_id</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[poem_DC3D9F0D49A84E2B96F1CE2FF8591A73]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>char_count</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[char_count]</local-name>
+            <parent-name>[poem]</parent-name>
+            <remote-alias>char_count</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[poem_DC3D9F0D49A84E2B96F1CE2FF8591A73]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>poki_num</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[poki_num]</local-name>
+            <parent-name>[poem]</parent-name>
+            <remote-alias>poki_num</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[poem_DC3D9F0D49A84E2B96F1CE2FF8591A73]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[id (author)]</local-name>
+            <parent-name>[author]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[author_EFC0E1FA4BF84400A3FCF3AE90721FE4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name (author)]</local-name>
+            <parent-name>[author]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[author_EFC0E1FA4BF84400A3FCF3AE90721FE4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>grade_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[grade_id]</local-name>
+            <parent-name>[author]</parent-name>
+            <remote-alias>grade_id</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[author_EFC0E1FA4BF84400A3FCF3AE90721FE4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender_id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[gender_id]</local-name>
+            <parent-name>[author]</parent-name>
+            <remote-alias>gender_id</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[author_EFC0E1FA4BF84400A3FCF3AE90721FE4]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[id (gender)]</local-name>
+            <parent-name>[gender]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gender_4D8C420851594C8AA7E120149A9C6184]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name (gender)]</local-name>
+            <parent-name>[gender]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[gender_4D8C420851594C8AA7E120149A9C6184]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[id (grade)]</local-name>
+            <parent-name>[grade]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>false</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[grade_ECE0772F6C0B41E4A82C4954640C1FD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name (grade)]</local-name>
+            <parent-name>[grade]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[grade_ECE0772F6C0B41E4A82C4954640C1FD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Calculation1' datatype='integer' name='[Calculation_1368812828622884864]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT([emotion_id])' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='author' datatype='table' name='[__tableau_internal_object_id__].[author_EFC0E1FA4BF84400A3FCF3AE90721FE4]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='emotion' datatype='table' name='[__tableau_internal_object_id__].[emotion_4D5E96D7FF6F4C7EAE808BD8012E0204]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='gender' datatype='table' name='[__tableau_internal_object_id__].[gender_4D8C420851594C8AA7E120149A9C6184]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='grade' datatype='table' name='[__tableau_internal_object_id__].[grade_ECE0772F6C0B41E4A82C4954640C1FD9]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='poem' datatype='table' name='[__tableau_internal_object_id__].[poem_DC3D9F0D49A84E2B96F1CE2FF8591A73]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='poem_emotion' datatype='table' name='[__tableau_internal_object_id__].[poem_emotion_92F5AD4E16AE4439B9B24331E36F9762]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Author Id' datatype='integer' name='[author_id]' role='dimension' type='ordinal' />
+      <column caption='Char Count' datatype='integer' name='[char_count]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Emotion Id' datatype='integer' name='[emotion_id]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Gender Id' datatype='integer' name='[gender_id]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Grade Id' datatype='integer' name='[grade_id]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Id (Author)' datatype='integer' name='[id (author)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Id (Gender)' datatype='integer' name='[id (gender)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Id (Grade)' datatype='integer' name='[id (grade)]' role='dimension' type='ordinal' />
+      <column aggregation='Sum' caption='Id (Poem)' datatype='integer' name='[id (poem)]' role='dimension' type='ordinal' />
+      <column caption='Id (Poem Emotion)' datatype='integer' name='[id (poem_emotion)]' role='dimension' type='ordinal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Intensity Percent' datatype='integer' name='[intensity_percent]' role='measure' type='quantitative' />
+      <column caption='Name (Author)' datatype='string' name='[name (author)]' role='dimension' type='nominal' />
+      <column caption='Name (Gender)' datatype='string' name='[name (gender)]' role='dimension' type='nominal' />
+      <column caption='Name (Grade)' datatype='string' name='[name (grade)]' role='dimension' type='nominal' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Poem Id' datatype='integer' name='[poem_id]' role='dimension' type='ordinal' />
+      <column caption='Poki Num' datatype='integer' name='[poki_num]' role='dimension' type='ordinal' />
+      <column caption='Text' datatype='string' name='[text]' role='dimension' type='nominal' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column-instance column='[name (gender)]' derivation='None' name='[none:name (gender):nk]' pivot='key' type='nominal' />
+      <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Grade Id)' hidden='true' name='[Action (Grade Id)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[grade_id]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Name (Gender))' hidden='true' name='[Action (Name (Gender))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[name (gender)]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Name)' hidden='true' name='[Action (Name)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[name]' />
+        </groupfilter>
+      </group>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:name (gender):nk]' type='palette'>
+            <map to='#b3f2e7'>
+              <bucket>&quot;Male&quot;</bucket>
+            </map>
+            <map to='#f27e63'>
+              <bucket>&quot;Female&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:name:nk]' type='palette'>
+            <map to='#3d3d3d'>
+              <bucket>&quot;Fear&quot;</bucket>
+            </map>
+            <map to='#83bee5'>
+              <bucket>&quot;Sadness&quot;</bucket>
+            </map>
+            <map to='#83e1a5'>
+              <bucket>&quot;Joy&quot;</bucket>
+            </map>
+            <map to='#ff5e61'>
+              <bucket>&quot;Anger&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='author' id='author_EFC0E1FA4BF84400A3FCF3AE90721FE4'>
+            <properties context=''>
+              <relation connection='postgres.1as1ilz1kjda1h1frf8tv1xxw1ti' name='author' table='[public].[author]' type='table' />
+            </properties>
+          </object>
+          <object caption='emotion' id='emotion_4D5E96D7FF6F4C7EAE808BD8012E0204'>
+            <properties context=''>
+              <relation connection='postgres.1as1ilz1kjda1h1frf8tv1xxw1ti' name='emotion' table='[public].[emotion]' type='table' />
+            </properties>
+          </object>
+          <object caption='gender' id='gender_4D8C420851594C8AA7E120149A9C6184'>
+            <properties context=''>
+              <relation connection='postgres.1as1ilz1kjda1h1frf8tv1xxw1ti' name='gender' table='[public].[gender]' type='table' />
+            </properties>
+          </object>
+          <object caption='grade' id='grade_ECE0772F6C0B41E4A82C4954640C1FD9'>
+            <properties context=''>
+              <relation connection='postgres.1as1ilz1kjda1h1frf8tv1xxw1ti' name='grade' table='[public].[grade]' type='table' />
+            </properties>
+          </object>
+          <object caption='poem' id='poem_DC3D9F0D49A84E2B96F1CE2FF8591A73'>
+            <properties context=''>
+              <relation connection='postgres.1as1ilz1kjda1h1frf8tv1xxw1ti' name='poem' table='[public].[poem]' type='table' />
+            </properties>
+          </object>
+          <object caption='poem_emotion' id='poem_emotion_92F5AD4E16AE4439B9B24331E36F9762'>
+            <properties context=''>
+              <relation connection='postgres.1as1ilz1kjda1h1frf8tv1xxw1ti' name='poem_emotion' table='[public].[poem_emotion]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[author_id]' />
+              <expression op='[id (author)]' />
+            </expression>
+            <first-end-point object-id='poem_DC3D9F0D49A84E2B96F1CE2FF8591A73' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='author_EFC0E1FA4BF84400A3FCF3AE90721FE4' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[gender_id]' />
+              <expression op='[id (gender)]' />
+            </expression>
+            <first-end-point object-id='author_EFC0E1FA4BF84400A3FCF3AE90721FE4' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='gender_4D8C420851594C8AA7E120149A9C6184' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[grade_id]' />
+              <expression op='[id (grade)]' />
+            </expression>
+            <first-end-point object-id='author_EFC0E1FA4BF84400A3FCF3AE90721FE4' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='grade_ECE0772F6C0B41E4A82C4954640C1FD9' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[poem_id]' />
+              <expression op='[id (poem)]' />
+            </expression>
+            <first-end-point object-id='poem_emotion_92F5AD4E16AE4439B9B24331E36F9762' />
+            <second-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='poem_DC3D9F0D49A84E2B96F1CE2FF8591A73' unique-key='true' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[id]' />
+              <expression op='[emotion_id]' />
+            </expression>
+            <first-end-point _.fcp.ObjectModelRelationshipPerfOptions.true...is-db-set-unique-key='true' object-id='emotion_4D5E96D7FF6F4C7EAE808BD8012E0204' unique-key='true' />
+            <second-end-point object-id='poem_emotion_92F5AD4E16AE4439B9B24331E36F9762' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Intensity Vs Gender' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Intensity Vs Grade' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action3]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Sheet 3' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Intensity Vs Gender'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Emotional Intensity By Gender&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='emotion+ (PoKi)' name='federated.01quck81ujjp6g1dsisfv04ecub5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.01quck81ujjp6g1dsisfv04ecub5'>
+            <column-instance column='[intensity_percent]' derivation='Avg' name='[avg:intensity_percent:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Grade Id' datatype='integer' name='[grade_id]' role='dimension' type='ordinal' />
+            <column caption='Intensity Percent' datatype='integer' name='[intensity_percent]' role='measure' type='quantitative' />
+            <column caption='Name (Gender)' datatype='string' name='[name (gender)]' role='dimension' type='nominal' />
+            <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[name (gender)]' derivation='None' name='[none:name (gender):nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.01quck81ujjp6g1dsisfv04ecub5].[Action (Grade Id)]'>
+            <groupfilter function='level-members' level='[grade_id]' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.01quck81ujjp6g1dsisfv04ecub5].[Action (Name)]'>
+            <groupfilter function='level-members' level='[name]' user:ui-action-filter='[Action3]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name (gender):nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:name (gender):nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:name (gender):nk]' member='%null%' />
+                <groupfilter function='member' level='[none:name (gender):nk]' member='&quot;Ambiguous&quot;' />
+                <groupfilter function='member' level='[none:name (gender):nk]' member='&quot;NA&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name (gender):nk]</column>
+            <column>[federated.01quck81ujjp6g1dsisfv04ecub5].[Action (Name)]</column>
+            <column>[federated.01quck81ujjp6g1dsisfv04ecub5].[Action (Grade Id)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name (gender):nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.01quck81ujjp6g1dsisfv04ecub5].[avg:intensity_percent:qk]</rows>
+        <cols>[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name (gender):nk]</cols>
+      </table>
+      <simple-id uuid='{767131EF-F209-45F4-810A-7FA6CA55DF59}' />
+    </worksheet>
+    <worksheet name='Intensity Vs Grade'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Emotional Intensity By Grade&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='emotion+ (PoKi)' name='federated.01quck81ujjp6g1dsisfv04ecub5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.01quck81ujjp6g1dsisfv04ecub5'>
+            <column-instance column='[intensity_percent]' derivation='Avg' name='[avg:intensity_percent:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Grade Id' datatype='integer' name='[grade_id]' role='dimension' type='ordinal' />
+            <column caption='Intensity Percent' datatype='integer' name='[intensity_percent]' role='measure' type='quantitative' />
+            <column caption='Name (Gender)' datatype='string' name='[name (gender)]' role='dimension' type='nominal' />
+            <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[grade_id]' derivation='None' name='[none:grade_id:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[name (gender)]' derivation='None' name='[none:name (gender):nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.01quck81ujjp6g1dsisfv04ecub5].[Action (Name (Gender))]'>
+            <groupfilter function='level-members' level='[name (gender)]' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.01quck81ujjp6g1dsisfv04ecub5].[Action (Name)]'>
+            <groupfilter function='level-members' level='[name]' user:ui-action-filter='[Action3]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.01quck81ujjp6g1dsisfv04ecub5].[none:grade_id:ok]'>
+            <groupfilter from='1' function='range' level='[none:grade_id:ok]' to='5' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name (gender):nk]'>
+            <groupfilter function='level-members' level='[none:name (gender):nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.01quck81ujjp6g1dsisfv04ecub5].[none:grade_id:ok]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.01quck81ujjp6g1dsisfv04ecub5].[avg:intensity_percent:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.01quck81ujjp6g1dsisfv04ecub5].[none:grade_id:ok]</column>
+            <column>[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name (gender):nk]</column>
+            <column>[federated.01quck81ujjp6g1dsisfv04ecub5].[Action (Name (Gender))]</column>
+            <column>[federated.01quck81ujjp6g1dsisfv04ecub5].[Action (Name)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.01quck81ujjp6g1dsisfv04ecub5].[none:grade_id:ok]' value='78' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.01quck81ujjp6g1dsisfv04ecub5].[avg:intensity_percent:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.01quck81ujjp6g1dsisfv04ecub5].[avg:intensity_percent:qk]' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#eaf1f0</color>
+                <color>#e4f1ef</color>
+                <color>#def1ee</color>
+                <color>#d8f1ed</color>
+                <color>#d2f1ec</color>
+                <color>#cbf1eb</color>
+                <color>#c5f1ea</color>
+                <color>#bff1e9</color>
+                <color>#b9f1e8</color>
+                <color>#b3f2e7</color>
+              </color-palette>
+            </encoding>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.01quck81ujjp6g1dsisfv04ecub5].[avg:intensity_percent:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.01quck81ujjp6g1dsisfv04ecub5].[avg:intensity_percent:qk]</rows>
+        <cols>[federated.01quck81ujjp6g1dsisfv04ecub5].[none:grade_id:ok]</cols>
+      </table>
+      <simple-id uuid='{744973D9-E058-40E5-A782-55D71DAFF37A}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Total Poems Written Per Emotion</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='emotion+ (PoKi)' name='federated.01quck81ujjp6g1dsisfv04ecub5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.01quck81ujjp6g1dsisfv04ecub5'>
+            <_.fcp.ObjectModelTableType.false...column caption='poem_emotion' datatype='integer' name='[__tableau_internal_object_id__].[poem_emotion_92F5AD4E16AE4439B9B24331E36F9762]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[poem_emotion_92F5AD4E16AE4439B9B24331E36F9762]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:poem_emotion_92F5AD4E16AE4439B9B24331E36F9762:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='poem_emotion' datatype='table' name='[__tableau_internal_object_id__].[poem_emotion_92F5AD4E16AE4439B9B24331E36F9762]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Grade Id' datatype='integer' name='[grade_id]' role='dimension' type='ordinal' />
+            <column caption='Name (Gender)' datatype='string' name='[name (gender)]' role='dimension' type='nominal' />
+            <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+            <column-instance column='[name]' derivation='None' name='[none:name:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.01quck81ujjp6g1dsisfv04ecub5].[Action (Grade Id)]'>
+            <groupfilter function='level-members' level='[grade_id]' user:ui-action-filter='[Action2]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.01quck81ujjp6g1dsisfv04ecub5].[Action (Name (Gender))]'>
+            <groupfilter function='level-members' level='[name (gender)]' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.01quck81ujjp6g1dsisfv04ecub5].[__tableau_internal_object_id__].[cnt:poem_emotion_92F5AD4E16AE4439B9B24331E36F9762:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.01quck81ujjp6g1dsisfv04ecub5].[Action (Name (Gender))]</column>
+            <column>[federated.01quck81ujjp6g1dsisfv04ecub5].[Action (Grade Id)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name:nk]</rows>
+        <cols>[federated.01quck81ujjp6g1dsisfv04ecub5].[__tableau_internal_object_id__].[cnt:poem_emotion_92F5AD4E16AE4439B9B24331E36F9762:qk]</cols>
+      </table>
+      <simple-id uuid='{7AF75347-8B93-4C0B-869E-67A738C99BD7}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='23' param='horz' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='98000' id='21' w='98400' x='800' y='1000'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='65626' id='7' param='horz' w='88898' x='800' y='1000'>
+                <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='65626' id='5' w='88898' x='800' y='1000'>
+                  <zone h='65626' id='3' name='Intensity Vs Grade' w='44449' x='800' y='1000'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='65626' id='9' name='Intensity Vs Gender' w='30716' x='58982' y='1000'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='57758' id='8' name='Intensity Vs Grade' pane-specification-id='0' param='[federated.01quck81ujjp6g1dsisfv04ecub5].[avg:intensity_percent:qk]' w='13733' x='45249' y='8868'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone _.fcp.SetMembershipControl.false...type='empty' _.fcp.SetMembershipControl.true...type-v2='empty' h='7868' id='11' w='13733' x='45249' y='1000'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='55500' id='10' name='Intensity Vs Gender' pane-specification-id='0' param='[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name (gender):nk]' w='9502' x='89698' y='11126'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone _.fcp.SetMembershipControl.false...type='empty' _.fcp.SetMembershipControl.true...type-v2='empty' h='10126' id='12' w='9502' x='89698' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='32374' id='20' name='Sheet 3' w='98400' x='800' y='66626'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='25' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='24' param='vert' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='65626' id='3' is-fixed='true' name='Intensity Vs Grade' w='44449' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='57758' id='8' name='Intensity Vs Grade' pane-specification-id='0' param='[federated.01quck81ujjp6g1dsisfv04ecub5].[avg:intensity_percent:qk]' w='13733' x='45249' y='8868'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='65626' id='9' is-fixed='true' name='Intensity Vs Gender' w='30716' x='58982' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='55500' id='10' name='Intensity Vs Gender' pane-specification-id='0' param='[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name (gender):nk]' w='9502' x='89698' y='11126'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='251' h='32374' id='20' is-fixed='true' name='Sheet 3' w='98400' x='800' y='66626'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{4B4B00E8-0F4D-45E5-A8F0-C34EB7727D0E}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='Intensity Vs Grade'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.01quck81ujjp6g1dsisfv04ecub5].[avg:intensity_percent:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.01quck81ujjp6g1dsisfv04ecub5].[avg:intensity_percent:qk]</field>
+            <field>[federated.01quck81ujjp6g1dsisfv04ecub5].[none:grade_id:ok]</field>
+            <field>[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name (gender):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F168EA47-C7AF-4115-9815-088453B61D2C}' />
+    </window>
+    <window class='worksheet' name='Intensity Vs Gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name (gender):nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name (gender):nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D3D6D4C8-7F75-42B1-8B57-3B35F263A2A7}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{EBEE7F60-836F-43AE-AF9E-AB20D92756A1}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Intensity Vs Gender'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name (gender):nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Intensity Vs Grade'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sheet 3'>
+          <highlight field='[federated.01quck81ujjp6g1dsisfv04ecub5].[none:name:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{95829536-BD1D-4930-B5B2-B8E745A5A9CD}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Intensity Vs Gender' width='176'>
+      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
+      RU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Intensity Vs Grade' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAMp0lEQVR4nO3dW2xb9R0H8O85vsSO46S5OLcmbdo6za2X0JRe17GBxmBQITFNGhJsCLFJ
+      e5gQj9vLJvEGmiZte9lGN3aDrppEV6CsQNPBgELShDZtc2kap0kaO4lz8yW242OfswfWQEcT
+      u9jnJPX/+3lBJuZ/fon95Vz+539+kqZpGogEJEmSJK92EUSriQEgoTEAJDQGgITGAJDQGIA1
+      ZN7bjyO/fxFHjx5D//X5Zd934eQxnPdGbv6XwTH8+g/HkQAAxHD0L3/FYkLPanODebULoBs0
+      XOj8GHfffxiYGUdxQRJvv3ocCWcFtlbLOHd+ABta70PxwhW0d/TiYONX8OarbyAorcPhh+9D
+      vqZBVVX4hy/gzNmLGJ4MgNe3U+MeYA2RJAmqJsMc8ODdy2MYGfFj34FdmPRcQywWQMfZC+jo
+      9WHvrgYEhjrxfv8kghOTCCeTS2OcO9OFr377UWxyOVfxN7lzMABrhoS79h1A16lX0TU0jarS
+      QpRVVsORZ0I4vAB74ToUFRWi1plE94AXxRsbUesACkuKYZElQDbB6ciHu8GFk8dOYCYGSNJq
+      /05rn8SZYBIVZ4JJeIYEIJlMQlVVIzZFdFsMCQCPsmit4iEQCY0BIKExACQ0BoCExgCQ0BgA
+      EhoDQEJjAEhoDAAJjQEgoTEAJLSsBEDTNMz6p6CowJzfi2vXRhCKxrMxNJGushKA2Owo3nv3
+      QwQUFQP9A1BVDbz/je4EGa8J1tRFDIwGsc1dBSCKwHQQinkGruoaqKq6dCt0MpmExCVKtIKn
+      n30GRZtqdd3G7NVr+OOvfrP0OuMABL0ejIyPIz7nQ13+ehx84EGogXFcGR5HW9NGyLKMRCIB
+      WZYhyzzloOW5Ntfh6z/8vq7baP/dS7BarUuvMw5AUU0THqlpwtTIVdgqyjB8uRszCypaWndl
+      OjQZxO/3o729Xfft7Ny5E42Njbpv53Zk7bEo5RvdAIDtbfuyNSQZpK+vD6N2EzY16/vl/Ncb
+      p3I3APTleDwevPTKy7Dl5+u2jeDcHH72k5/Cbrcv+57CkmIUl5frVgMAXF+D54AMwCrz+/2o
+      3n83mnfrd8j45t9egaIoKwZAVDwrJaExACQ0BoCEJvQ5QDweR/Jzz9XUi81m4yTgGiV0AH7+
+      3HOwukp03cbFrm789he/RFlZma7boS9H6ACsKy3BQ0/qO/OY73DoOj5lhucAJDQGgITGAJDQ
+      GAASGgNAQmMASGirchlU0zRDegZIksQJKFrRqgRAURQ89thj2LdP37UDfr8fzz//vK7boDvb
+      qk2EHTp0CE899ZSu2zhy5Iiu49Odj+cAJDQGgITGAJDQGAASGgNAQmMASGgMAAmNASChMQAk
+      NAaAhMYAkNCy0yFGjeGD06cRVFQMXujAmffOIhBNZGNoIl1lJQCjA32QrVbEw1OYM1Vid1Mt
+      vBOT2RiaSFcZ3w0aD3jhi+ShwBxANByGzVkKm01FMhBetkNMPG5M/zBVVVfclppUDalDUZRl
+      61AUZdVrSCQSgPWWP8qqZDK54udhxBoRTdNuqiHjACRghg1RjPsmgaotCI/14dKUjKKaxqWu
+      MKvVIUaW5Zu6gXzh5yZj6rFYLMvWYbFYAAP+f7BSDWazGYD+QTSZTCt+HkYsXpIkKbsdYvKL
+      ytHaVo7F5kaY8hxQSgswH1VR4VqX6dBEusvagpg8+6dPQDM7i2F3ZmtUIn3xMigJjQEgoTEA
+      JDQGgITGAJDQGAASGgNAQmMASGgMAAmNASChMQAkNAaAhMYAkNAYABIaA0BCYwBIaAwACY0B
+      IKExACQ0BoCExgCQ0BgAEhoDQEJjAEhoDAAJjQEgoTEAJLSMnw2qJaI439WNUMKCnbt2Ybz3
+      LCYCKhpa27C+pCAbNRLpJgsPxzWhofVuzF+/gsnpacTlYtx777bMhyUyQMYBkMxWTHvO46ov
+      hO13bcD8kB/vvH0a7h27scHlZIMMsEHGDTnZICMeCUJ2uLC50oLJcR9KN7lRGQ9iPhSGXFHE
+      Bhlgg4wb1mKDjIy/AWZrHhLREGKyA1vr3XCaEojAgcZN1ZkOTaS7jPcAsjkPde7GpdflNZtQ
+      numgRAbhZVASGgNAQmMASGgMAAmNASChMQAkNAaAhMYAkNAYABIaA0BCYwBIaAwACY0BIKEx
+      ACQ0BoCExgCQ0BgAEhoDQEJjAEhoDAAJjQEgoTEAJDQGgITGAJDQGAASGgNAQmMASGgZB0BL
+      xtBz7ize/7gbEUXFxHAvPujswWJS/0ddE2Uq8z2AKmFT8y64y20YHR6EZ9aEpup8DI1OZqE8
+      In1l3iDDkoe54fMYHA9iR30VFFs5CosS8E6ElxpjsEEGG2QAOdogQ4mG4azYgu15PviCMYRC
+      Y/AnTTBbSpeaYrBBBhtkADnaIMNkNsHr6cPIrIKtW1vQVGOHN2yCu5ZdAmjty7xBhsWOlrv2
+      LL22rd+CkvWZjkpkDF4GJaExACQ0BoCExgCQ0G4rACdOnNCrDqJVcVsB6Ojs0KsOolWRVgBO
+      vHYCVwav6F0LkeFWnAcY945jwjeBhYUFKHFjpuyJjLTiHkCJK4hEIqiurobT6URDQ4NRdREZ
+      YsU9QF1dHerq6pZeP/H4E3rXQ2SoNM4BNMRjMajA0j+JckXKACzMT+P1l/+OnqtXcfLoccwZ
+      URWRQVLeDBcJTOO6zwsMDaG0uQXFRlRFZJCUAXBtbMTTP/4BvJNz0GBFEpw+ptyR1ne569RJ
+      DHgnMTk5g6TeFREZKK0ASIhgcGAInuExJPSuiMhAaS2Iadp3CDM9c6ipLoBN74qIDJTWHqC3
+      8xz80wFM9A5gVu+KiAyUVgDqd7RgYaofk7ZSlOpdEZGB0gpAOAR875lnsX9DCWJ6V0RkoLQC
+      MDM+hPM9l9DZfYlXgSinpBWAancLHIjjwEMPolDviogMlFYAQjMjmI7KsCTjvAxKOSWtABS6
+      amBT5uHxXDfg+WFExkkrAEpkCv1DYaiJEPjMZ8olaU2E+a5NQYYVU2NBxADk61wUkVFS7gFi
+      wRlYXJVw2hVUbGtDiRFVERkkRQAW8do/jmM+EgXyq3DPniZjqiIySIpDoAVEonY0VFTAc+kT
+      fNJTje07GpD3+bfEQzjb0Y3QQhz1rXsw3vNvxE3r0NDahvUlBXrWTpSxFAEowO69bswGYmje
+      3YRYMPzFk2BLAfYdPITx4UFIchSqtA6b3W64ihxQVRWapkHTNKiqClX9dEFlMmnMdJqmaZ82
+      f1ju56oxp/TJZHLZOoz6W6xUg6qqhizy0FR1xc8DhjTIwE01pAiAFS2790DTVmheIKm41t8H
+      a1ktqssKYGlKYH7OjwFFwrbNVTe/1YAGCF8ob6VtGlSOJEnL1mHU32Qt1ABp7XweN6R1FehK
+      Zzs6r86gcWcbttVvhM362X+WDPjwycAI1nmnodS7MTHqQSgSx5btdUt/dFVVb+oQYzKZsvwr
+      3ZokSStuy6gPXpblZeswqmvOSjUYF8Lla/jfOwyo4ebvX1oBKN/gRtVMCB+9ewb9Fyvxne8+
+      vHQeYCqqwaOP1Cy9t6625taDEK1BaQUgMDePuu0H8LUHXAj6p7kmmHJGyu9yMqHANzIFZ0kB
+      uk+dhlbugsWIyogMkHIP4Bvoxptvv4VK33XkO6rQakRVRAZJuQdQFm2455v7kW82wxyPc0EM
+      5ZSUe4Dabc0ojdRgWzSKidk47wOinJIyAGarBedfa8ekKYnR3nnUtvyI9wNRzkjrKtD2Q4dQ
+      E1nEjvpFOPSuiMhAaQWg9/230BexwGEqwvqW/7sXiOgOllYArHlW1FY2oNxu5yVQyilpzWnV
+      7dyLinx5Ve7lIdJTWgGYG7+M0/+5Ct/YENcEU05J6xBodioEMxT4vAt8KgTllLQCsHlHGyL2
+      UUj2Ml4FopyS8hBozjuM48feQCLfAc+5LgSNqIrIICkDYLJYUeJywW614sDhBzkJRjklZQAK
+      XeuxpcaBgd4+nPuwCwtGVEVkkLTOAaCZcfD+w6i2m3gvEOWUNB+NWIa+D9tx+vRHiOpdEZGB
+      UuwBojjzz5Pwhm/cBG1ho2zKKSkCkIc9934DiaXHh8i8DEo5JUUAZDicn3UEiEejfDgu5ZTb
+      Wt9+/XI/QnpVQrQK0rgKpOFazwc40zUIQEK9pQgHd2426hlGRLpKaw8wNjiBbz3+JDYWFWPk
+      Ygf3ApQz0poHqGusxOt//hMU2YnmLTVcEEM5I60ALCYsOHjfA3DXlsMkSzz8oZyRxiGQhA3u
+      rRjtfgcvvPAiglwUQzkkjQBo8Fzuhj9mxf579t7iVggNsxOj6B8cxmJSQ3DaiyueMSR4vZTu
+      AP8FVAhBiN1UM14AAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='159' name='Sheet 3' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
